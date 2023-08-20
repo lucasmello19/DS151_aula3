@@ -12,12 +12,12 @@ const MediaCalculator = () => {
         const nota2 = parseFloat(input2);
         const result1 = (nota1 + nota2) / 2;
 
-        setResult('O resultado da média é:' + result1)
+        setResult('O resultado da média é: ' + result1)
     }
 
     return (
         <View style={styles.container}>
-            <Text>
+            <Text style={styles.title}>
                 {"Calculadora de média"}
             </Text>
             <TextInput
@@ -38,7 +38,7 @@ const MediaCalculator = () => {
                 title='Calcular Média'
                 onPress={calcularMedia}
             />
-            <Text>
+            <Text style={styles.result}>
                 {result}
             </Text>
         </View>
