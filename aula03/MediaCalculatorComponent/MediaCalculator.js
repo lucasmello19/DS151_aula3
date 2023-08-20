@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styles from './MediaCalculatorStyles';
-import { StyleSheet, View, TextInput } from 'react-native';
-
+import { View, TextInput, Button, Text } from 'react-native';
 
 const MediaCalculator = () => {
     const [input1, setInput1] = useState('');
@@ -11,7 +10,9 @@ const MediaCalculator = () => {
     function calcularMedia() {
         const nota1 = parseFloat(input1);
         const nota2 = parseFloat(input2);
-        const resultado = (nota1 + nota2) / 2;
+        const result1 = (nota1 + nota2) / 2;
+
+        setResult('O resultado da média é:' + result1)
     }
 
     return (
@@ -28,8 +29,14 @@ const MediaCalculator = () => {
                 placeholder="Digite o segundo número"
                 keyboardType="numeric"
                 value={input2}
-                onChangeText={text => setInput1(text)}
+                onChangeText={text => setInput2(text)}
             />
+            <Button
+                title='Calcular Média'
+                onPress={calcularMedia}
+            />
+            <Text>
+                {result}</Text>
         </View>
     )
 }
