@@ -17,6 +17,9 @@ const MediaCalculator = () => {
 
     return (
         <View style={styles.container}>
+            <Text>
+                {"Calculadora de média"}
+            </Text>
             <TextInput
                 style={styles.input}
                 placeholder="Digite o primeiro número"
@@ -36,7 +39,8 @@ const MediaCalculator = () => {
                 onPress={calcularMedia}
             />
             <Text>
-                {result}</Text>
+                {result}
+            </Text>
         </View>
     )
 }
